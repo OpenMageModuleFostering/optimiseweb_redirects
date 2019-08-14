@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Optimiseweb_Redirects</name>
-    <version>0.1.5</version>
+    <version>0.1.7</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
     <channel>community</channel>
@@ -10,11 +10,14 @@
     <description>Magento has an internal URL Rewrite Management system. It can be a laborious task to add all your redirects, one by one.&#xD;
 &#xD;
 The Optimise Web Redirects extension allows you to upload all your redirect data as a CSV file.</description>
-    <notes>Renamed the blocks, helpers and models to ow_redirects. The previously used name was causing problems with compilation. If you encounter any issues with this version please write to us and we will sort it out quickly.</notes>
+    <notes>New update with two new features.&#xD;
+* Improved CSV file support&#xD;
+* Ability to provide query string based redirects&#xD;
+* Old CSV will still work as the first option</notes>
     <authors><author><name>Kathir Vel</name><user>OptimiseWeb</user><email>info@optimiseweb.co.uk</email></author></authors>
-    <date>2013-07-17</date>
-    <time>09:45:09</time>
-    <contents><target name="magecommunity"><dir name="Optimiseweb"><dir name="Redirects"><dir name="Block"><dir name="System"><dir name="Config"><dir name="Backend"><file name="Download.php" hash="4d7976863e76ff6aba22f37b46a04cc7"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="ef4e86f64b9f046a5ccb79b1111e1927"/></dir><dir name="Model"><file name="Redirector.php" hash="acc75ccfbd13c699cf6015d9e69baad4"/></dir><dir name="etc"><file name="adminhtml.xml" hash="3e583ea2eaeaa0aa352c0a3a985d0ad0"/><file name="config.xml" hash="0f9342ed0c0b443f9384c3ff4475f69e"/><file name="system.xml" hash="760fc753f20b60b8143cc78d7f3b52e5"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Optimiseweb_Redirects.xml" hash="455126831539cd3afc0aab1125bf41e5"/></dir></target></contents>
+    <date>2013-11-07</date>
+    <time>14:32:37</time>
+    <contents><target name="magecommunity"><dir name="Optimiseweb"><dir name="Redirects"><dir name="Block"><dir name="System"><dir name="Config"><dir name="Backend"><file name="Download.php" hash="76e64a0957fe7df052760ffa850abaad"/><file name="Download1.php" hash="3962f8bebc085630a22989cbc0c8502a"/><file name="Downloadquerystringfile.php" hash="610be4937f16577f8a6588bd8c6c978c"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="ef4e86f64b9f046a5ccb79b1111e1927"/></dir><dir name="Model"><file name="Redirector.php" hash="6b43bda3e79fa328222fb057c808ffe0"/></dir><dir name="etc"><file name="adminhtml.xml" hash="22de1e5ccbd05fd303d8a09c1682d698"/><file name="config.xml" hash="eadf123a259eac38d3f1ccf8218f36f2"/><file name="system.xml" hash="0918c53b9070c2b42ad68f7209956019"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Optimiseweb_Redirects.xml" hash="455126831539cd3afc0aab1125bf41e5"/></dir></target><target name="magelocale"><dir name="en_US"><file name="Optimiseweb_Redirects.csv" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

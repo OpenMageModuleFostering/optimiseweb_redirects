@@ -11,22 +11,22 @@
 
     <modules>
         <Optimiseweb_Redirects>
-            <version>0.1.5</version>
+            <version>0.1.7</version>
         </Optimiseweb_Redirects>
     </modules>
 
     <frontend>
-        <events>
-            <controller_action_predispatch>
-                <observers>
-                    <optimiseweb_redirects_model_redirector>
-                        <type>singleton</type>
-                        <class>ow_redirects/redirector</class>
-                        <method>doRedirects</method>
-                    </optimiseweb_redirects_model_redirector>
-                </observers>
-            </controller_action_predispatch>
-        </events>
+        
+        <translate>
+            <modules>
+                <Optimiseweb_Redirects>
+                    <files>
+                        <default>Optimiseweb_Redirects.csv</default>
+                    </files>
+                </Optimiseweb_Redirects>
+            </modules>
+        </translate>
+        
     </frontend>
 
     <adminhtml>
@@ -64,7 +64,34 @@
                 <class>Optimiseweb_Redirects_Model</class>
             </ow_redirects>
         </models>
+        
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <optimiseweb_redirects_model_redirector>
+                        <type>singleton</type>
+                        <class>ow_redirects/redirector</class>
+                        <method>doRedirects</method>
+                    </optimiseweb_redirects_model_redirector>
+                </observers>
+            </controller_action_predispatch>
+        </events>
 
     </global>
 
+    <default>
+
+        <optimisewebredirects>
+            <redirects1>
+                <delimiter>,</delimiter>
+                <wildcardcharacter>*</wildcardcharacter>
+            </redirects1>
+            <querystring>
+                <delimiter>,</delimiter>
+                <wildcardcharacter>*</wildcardcharacter>
+            </querystring>
+        </optimisewebredirects>
+
+    </default>
+    
 </config>
