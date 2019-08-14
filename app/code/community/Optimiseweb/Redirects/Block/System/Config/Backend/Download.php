@@ -19,9 +19,24 @@ class Optimiseweb_Redirects_Block_System_Config_Backend_Download extends Mage_Ad
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
     {
+        $store = Mage::app()->getRequest()->getParam('store');
+        $website = Mage::app()->getRequest()->getParam('website');
+        if ($store) {
+            $storeData = Mage::getModel('core/store')->getCollection()->addFieldToFilter('code', $store)->getFirstItem();
+            $storeId = $storeData->getStoreId();
+            $fileName = Mage::getStoreConfig('optimisewebredirects/general/upload', $storeId);
+        } elseif ($website) {
+            $websiteData = Mage::getModel('core/website')->getCollection()->addFieldToFilter('code', $website)->getFirstItem();
+            $websiteId = $websiteData->getWebsiteId();
+            $fileName = Mage::app()->getWebsite($websiteId)->getConfig('optimisewebredirects/general/upload');
+        } else {
+            $fileName = Mage::getStoreConfig('optimisewebredirects/general/upload');
+        }
+
         $this->setElement($element);
-        if (Mage::getStoreConfig('optimisewebredirects/general/upload')) {
-            $url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'optimiseweb/redirects/' . Mage::getStoreConfig('optimisewebredirects/general/upload');
+        
+        if ($fileName) {
+            $url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'optimiseweb/redirects/' . $fileName;
             $html = "<a href='" . $url . "'>Download</a>";
         } else {
             $html = "No CSV file provided.";
