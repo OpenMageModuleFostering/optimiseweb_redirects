@@ -4,7 +4,7 @@
  * Optimiseweb Redirects Model Redirector
  *
  * @package     Optimiseweb_Redirects
- * @author      Kathir Vel (sid@optimiseweb.co.uk)
+ * @author      Kathir Vel (vkathirvel@gmail.com)
  * @copyright   Copyright (c) 2015 Kathir Vel
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
@@ -29,10 +29,12 @@ class Optimiseweb_Redirects_Model_Redirector
 
         $requestUrl = rtrim($request->getScheme() . '://' . $request->getHttpHost() . $request->getRequestUri(), '/');
         if ($disabledProductCheck) {
-            $requestUrl = rtrim($request->getScheme() . '://' . $request->getHttpHost() . '/' . $disabledProductCheck, '/');
+            //$requestUrl = rtrim($request->getScheme() . '://' . $request->getHttpHost() . '/' . $disabledProductCheck, '/');
+            $requestUrl = rtrim(Mage::getUrl() . $disabledProductCheck, '/');
         }
         if ($disabledCategoryCheck) {
-            $requestUrl = rtrim($request->getScheme() . '://' . $request->getHttpHost() . '/' . $disabledCategoryCheck, '/');
+            //$requestUrl = rtrim($request->getScheme() . '://' . $request->getHttpHost() . '/' . $disabledCategoryCheck, '/');
+            $requestUrl = rtrim(Mage::getUrl() . $disabledCategoryCheck, '/');
         }
 
         if (($actionName == 'noRoute') OR $disabledProductCheck OR $disabledCategoryCheck) {
