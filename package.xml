@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Optimiseweb_Redirects</name>
+    <version>0.1.3</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Broken links can affect traffic and conversions. The Optimise Web Redirects extension helps setup bulk 301 redirects.</summary>
+    <description>Magento has an internal URL Rewrite Management system. It can be a laborious task to add all your redirects, one by one.&#xD;
+&#xD;
+The Optimise Web Redirects extension allows you to upload all your redirect data as a CSV file.</description>
+    <notes>First stable release</notes>
+    <authors><author><name>Kathir Vel</name><user>OptimiseWeb</user><email>info@optimiseweb.co.uk</email></author></authors>
+    <date>2012-10-14</date>
+    <time>11:12:34</time>
+    <contents><target name="magecommunity"><dir name="Optimiseweb"><dir name="Redirects"><dir name="Block"><dir name="System"><dir name="Config"><dir name="Backend"><file name="Download.php" hash="9624d76346a97d69875be5288ca8e568"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="949cce02b498d4ce711591e000c38602"/></dir><dir name="Model"><file name="Redirector.php" hash="d17fb991942792e0de44868d37c5b6a2"/></dir><dir name="etc"><file name="adminhtml.xml" hash="26aa20843f2fef2c879d9b325d7bf6e6"/><file name="config.xml" hash="995b8ee12ecc5edfc857c51c3c5de50b"/><file name="system.xml" hash="50814613f6fbcfef4b5b58b37ead9450"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Optimiseweb_Redirects.xml" hash="681b9c478a3c64ad940fc22eea4a789b"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

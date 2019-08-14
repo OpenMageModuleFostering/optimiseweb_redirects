@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Optimiseweb_Redirects",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Broken links can affect traffic and conversions. The Optimise Web Redirects extension helps setup bulk 301 redirects.",
+    "authors": [
+    {
+        "name": "Kathir Vel",
+        "email": "info@optimiseweb.co.uk"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
