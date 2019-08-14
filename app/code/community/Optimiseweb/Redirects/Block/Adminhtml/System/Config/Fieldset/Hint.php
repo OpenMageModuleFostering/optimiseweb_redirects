@@ -46,7 +46,7 @@ class Optimiseweb_Redirects_Block_Adminhtml_System_Config_Fieldset_Hint extends 
 
     public function getOptimiseWebUrl()
     {
-        $url = '//optimiseweb.co.uk?';
+        $url = 'https://optimiseweb.co.uk?';
         $url .= 'utm_source=Magento_Extension&utm_medium=Extension_Settings&utm_campaign=Optimiseweb_Redirects';
         return $url;
     }
@@ -60,14 +60,21 @@ class Optimiseweb_Redirects_Block_Adminhtml_System_Config_Fieldset_Hint extends 
 
     public function getKathirVelUrl()
     {
-        $url = '//www.kathirvel.com?';
+        $url = 'http://www.kathirvel.com?';
         $url .= 'utm_source=Magento_Extension&utm_medium=Extension_Settings&utm_campaign=Optimiseweb_Redirects';
         return $url;
     }
 
     public function getHelpDeskUrl()
     {
-        $url = '//optimiseweb.co.uk/magento-extension-support/?';
+        $url = 'https://optimiseweb.co.uk/magento-extension-support/?';
+        $url .= $this->getPxParams();
+        return $url;
+    }
+
+    public function getPxUrl()
+    {
+        $url = 'https://optimiseweb.co.uk/magento-connect/assets/logo/optimiseweb.php?';
         $url .= $this->getPxParams();
         return $url;
     }
