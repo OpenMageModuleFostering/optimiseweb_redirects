@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Optimiseweb_Redirects",
+    "name": "openmage-module-fostering\/optimiseweb_redirects",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Set up bulk 301 redirects for 404 pages by uploading the URL data in a CSV file. No HTACCESS or DB changes!",
     "authors": [
